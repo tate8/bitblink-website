@@ -1,0 +1,22 @@
+---
+
+import { Icon } from 'astro-icon/components';
+
+type Props = {
+  icon: "square" | "cloud" | "data"
+}
+
+const { icon } = Astro.props as Props;
+
+const iconNames = {
+  square: "fa6-solid:border-all",
+  cloud: "fa6-solid:cloud",
+  data: "fa6-solid:database"
+,}
+
+---
+
+
+<div class="w-14 h-14 bg-secondary rounded-2xl relative flex items-center justify-center">
+  <Icon name={iconNames[icon]} class="w-6 h-6 text-secondaryDark" />
+</div>

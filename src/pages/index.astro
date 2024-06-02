@@ -1,0 +1,73 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Section from "../components/Section.astro";
+import Heading from "../components/Heading.astro";
+import Subheading from "../components/Subheading.astro";
+import Button from "../components/Button.astro";
+import Group from "../components/Group.astro";
+---
+
+<Layout title="BitBlink">
+  <main>
+    <Section>
+      <div class="flex flex-col items-center justify-center px-4 md:px-16 lg:px-28 lg:flex-row lg:space-x-10">
+        <div class="flex flex-col space-y-6 md:space-y-8 lg:space-y-10 w-full lg:w-1/2 order-2 lg:order-none">
+          <Heading>Software solutions as a service</Heading>
+          <Subheading>At BitBlink Solutions we connect businesses with advanced technology products, fostering growth and innovation</Subheading>
+          <a href="mailto:tatelarkin@icloud.com" class="inline-block">
+            <Button>Contact Us</Button>
+          </a>
+        </div>
+        <img draggable="false" class="w-2/3 pb-4 max-w-xs md:max-w-sm lg:max-w-lg" src="../../public/computer.png" alt="Computer Graphic" />
+        
+      </div>
+    </Section>
+    <Section>
+      <div class="flex flex-col items-center justify-center h-full space-y-12 md:space-y-18 lg:space-y-24">
+        <div class="flex flex-col space-y-6 md:space-y-8 lg:space-y-10 items-center px-4 md:px-16 lg:px-28">
+          <Heading class="text-center">Ignite growth with BitBlink</Heading>
+          <Subheading class="text-center"
+            >This is what we do: Provide comprehensive tech products to help
+            your business succeed</Subheading
+          >
+        </div>
+        <div class="flex flex-col lg:flex-row space-y-10 md:space-y-12 lg:space-y-0 lg:space-x-12 mx-4 md:mx-16 lg:mx-28">
+          <Group
+            icon="square"
+            title="Custom Development"
+            description="Unlock the full potential of your business with tailored software products designed to meet your unique needs"
+          />
+          <Group
+            icon="cloud"
+            title="Cloud Solutions"
+            description="Enhance operations with secure, efficient cloud solutions. We provide seamless integration and improved data management"
+          />
+          <Group
+            icon="data"
+            title="Data Analytics"
+            description="Turn your data into insights with advanced analytics. Make informed decisions, optimize performance, and discover growth opportunities"
+          />
+        </div>
+      </div>
+    </Section>
+    <Section>
+      <div class="flex items-center justify-center mx-4 md:mx-16 lg:mx-28 space-y-8 lg:space-y-0 space-x-0 lg:space-x-24 flex-col lg:flex-row">
+        <img
+          draggable="false"
+          class="w-full w-2/3 pb-4 max-w-xs md:max-w-sm lg:max-w-md order-1 lg:order-none"
+          src="../../public/meeting.png"
+          alt="Computer Graphic"
+        />
+        <div class="flex justify-center items-center flex-col space-y-6 md:space-y-8 lg:space-y-10 w-full lg:w-1/2">
+          <div class="flex items-center justify-center flex-col space-y-3 md:space-y-4 lg:space-y-5">
+            <Heading class="text-center">Have an idea?</Heading>
+            <Subheading class="text-center">We'll bring it to life</Subheading>
+          </div>
+          <a href="mailto:tatelarkin@icloud.com" class="inline-block">
+            <Button>Contact Us</Button>
+          </a>
+        </div>
+      </div>
+    </Section>
+  </main>
+</Layout>

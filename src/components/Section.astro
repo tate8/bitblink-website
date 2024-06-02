@@ -1,0 +1,11 @@
+---
+type Props = {
+  class?: string;
+}
+
+const { class: additionalClass } = Astro.props as Props;
+---
+
+<section class:list={["flex flex-col justify-center min-h-screen", additionalClass]}>
+  <slot />
+</section>

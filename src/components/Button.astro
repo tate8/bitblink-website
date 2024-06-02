@@ -1,0 +1,27 @@
+---
+import { Icon } from 'astro-icon/components';
+
+type Props = {
+  mode?: "dark" | "light";
+};
+
+const { mode = "dark" } = Astro.props as Props;
+
+const fillClasses = {
+  dark: "bg-accent",
+  light: "bg-secondary",
+}
+
+const textClasses = {
+  dark: "text-white",
+  light: "text-black",
+}
+
+---
+
+<button class:list={["rounded-full flex justify-center items-center space-x-2 transition-transform transform hover:scale-105 duration-200", fillClasses[mode], "px-4 md:px-5 h-10 md:h-12 max-w-40"]}>
+  <p class:list={["text-base no-wrap", textClasses[mode]]}>
+    <slot />
+  </p>
+  <Icon name="fa6-solid:arrow-right" class={textClasses[mode]} />
+</button>
